@@ -25,7 +25,7 @@ import { BoldsDirective } from './bolds.directive'
     BrowserModule,
     HttpClientModule,
     NgProgressModule.forRoot(),
-    NgProgressHttpModule.forRoot(),
+    
     LoadingBarHttpClientModule,
     RoutingModule
   ],

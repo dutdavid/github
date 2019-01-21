@@ -19,7 +19,7 @@ export class SearchService {
     }
     let user = new User("","",0,0,"","","",0);
     let promise = new Promise((resolve,reject) => {
-      this.http.get<ApiData>(`https://api.github.com/users/${name}?access_token=6cd0364941ca5cdb7a9282e7c847eb0c580bd80d`).toPromise().then(data => {
+      this.http.get<ApiData>(`https://api.github.com/users/${name}?access_token=ff097f120d6be78298110dd85d268b1ee6475ae3`).toPromise().then(data => {
         user.name = data["login"];
         user.url = data["html_url"]
         user.created_at = data["created_at"]
@@ -51,7 +51,7 @@ export class SearchService {
     }
     let repos = [];
     let promise = new Promise((resolve,reject) => {
-      this.http.get<ApiData>(`https://api.github.com/users/dutdavid/repos?access_token=6cd0364941ca5cdb7a9282e7c847eb0c580bd80d`).toPromise().then(response => {
+      this.http.get<ApiData>(`https://api.github.com/users/dutdavid/repos?access_token=ff097f120d6be78298110dd85d268b1ee6475ae3`).toPromise().then(response => {
         for(let i = 0; i < response["length"];i++) {
           let newRepo = new Repo("","",0,0,"","",0)
           newRepo.name = response[i]["name"];
